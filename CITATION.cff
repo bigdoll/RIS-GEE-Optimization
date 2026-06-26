@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the following paper."
+title: "RIS-GEE-Optimization: Energy-efficiency optimization for active vs. nearly-passive RIS with global reflection constraints"
+authors:
+  - family-names: Fotock
+    given-names: Robert Kuku
+  - family-names: Zappone
+    given-names: Alessio
+  - family-names: Di Renzo
+    given-names: Marco
+preferred-citation:
+  type: article
+  title: "Energy Efficiency Optimization in RIS-Aided Wireless Networks: Active Versus Nearly-Passive RIS With Global Reflection Constraints"
+  authors:
+    - family-names: Fotock
+      given-names: Robert Kuku
+    - family-names: Zappone
+      given-names: Alessio
+    - family-names: Di Renzo
+      given-names: Marco
+  journal: "IEEE Transactions on Communications"
+  year: 2024
+  volume: 72
+  start: 257
+  end: 272
+  doi: "10.1109/TCOMM.2023.3320963"
+  notes: "HAL Id: hal-04734167"

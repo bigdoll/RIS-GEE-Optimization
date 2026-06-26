@@ -1,0 +1,26 @@
+# ---- MATLAB / simulation artifacts ----
+*.mat
+*.fig
+*.eps
+*.slx.autosave
+*.asv
+*.m~
+octave-workspace
+
+# ---- Figures / exports ----
+*.png
+*.pdf
+*.jpg
+!docs/**/*.png        # keep documentation images if any are added
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ---- Local Claude Code settings (not part of the project) ----
+.claude/
+
+# ---- CVX (do not commit a local CVX install) ----
+cvx/
