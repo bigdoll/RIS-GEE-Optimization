@@ -11,7 +11,8 @@ octave-workspace
 *.png
 *.pdf
 *.jpg
-!docs/**/*.png        # keep documentation images if any are added
+# keep documentation images (figures embedded in README live under docs/)
+!docs/**/*.png
 
 # ---- OS / editor ----
 .DS_Store

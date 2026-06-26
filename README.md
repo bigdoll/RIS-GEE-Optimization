@@ -1,7 +1,6 @@
 # Energy-Efficiency Optimization in RIS-Aided Wireless Networks
 
-<!-- Replace OWNER/REPO with your GitHub path once the repo is pushed. -->
-[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+[![CI](https://github.com/bigdoll/RIS-GEE-Optimization/actions/workflows/ci.yml/badge.svg)](https://github.com/bigdoll/RIS-GEE-Optimization/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2018b%2B-orange.svg)
 ![Solver](https://img.shields.io/badge/CVX-MOSEK-blue.svg)
@@ -129,6 +128,36 @@ denominator of the GEE.
   available, and recent CVX distributions bundle MOSEK. To fall back to the
   bundled open-source solver, change `cvx_solver mosek` to `cvx_solver sedumi`
   in the eight `*cvxopt*` files.
+
+## Example results
+
+The figures below are generated directly from the two entry-point scripts
+([`run_passive_ris.m`](examples/run_passive_ris.m),
+[`run_active_ris.m`](examples/run_active_ris.m)) using CVX + MOSEK. Each plots
+five schemes — the uniform baseline plus the two approaches, each in
+sum-rate-optimal and GEE-optimal mode — against the maximum transmit power.
+
+**Nearly-passive RIS**
+
+| Sum rate vs. power | GEE vs. power |
+|:---:|:---:|
+| ![Nearly-passive RIS — sum rate vs. transmit power](docs/figures/passive_sumrate_vs_power.png) | ![Nearly-passive RIS — GEE vs. transmit power](docs/figures/passive_gee_vs_power.png) |
+
+**Active RIS**
+
+| Sum rate vs. power | GEE vs. power |
+|:---:|:---:|
+| ![Active RIS — sum rate vs. transmit power](docs/figures/active_sumrate_vs_power.png) | ![Active RIS — GEE vs. transmit power](docs/figures/active_gee_vs_power.png) |
+
+The GEE-optimal schemes saturate the energy efficiency at high power (they stop
+spending power once it no longer improves GEE), whereas the sum-rate-optimal
+schemes keep trading power for rate; both approaches dominate the uniform
+baseline. These plots use a coarse 9-point power grid and a single channel
+realization for a fast, self-contained demo — increase the grid resolution and
+average over `Ncarlo` realizations (see below) to reproduce the smooth curves of
+the paper.
+
+---
 
 ## How to run
 
