@@ -1,0 +1,23 @@
+# Normalize line endings for text files (LF in the repo, native on checkout).
+* text=auto
+
+# ---- MATLAB source ----
+# Force GitHub Linguist to classify .m as MATLAB (the .m extension is otherwise
+# ambiguous with Objective-C), count them in the language stats, and show proper
+# syntax highlighting / diffs.
+*.m    text diff=matlab linguist-language=MATLAB
+*.mlx  binary linguist-language=MATLAB
+
+# ---- Documentation images are binary (no EOL conversion, no text diff) ----
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.eps  binary
+
+# ---- MATLAB binary artifacts (normally git-ignored, marked binary if committed) ----
+*.mat  binary
+*.fig  binary
+*.slx  binary
+*.mdl  binary
